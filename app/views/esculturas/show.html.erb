@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @escultura.modelo %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @escultura.valor %>
+</p>
+
+<p>
+  <b>Foto:</b>
+  <%= @escultura.foto %>
+</p>
+
+
+<%= link_to 'Edit', edit_escultura_path(@escultura) %> |
+<%= link_to 'Back', esculturas_path %>

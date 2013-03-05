@@ -1,0 +1,27 @@
+<h1>Listing esculturas</h1>
+
+<table>
+  <tr>
+    <th>Modelo</th>
+    <th>Valor</th>
+    <th>Foto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @esculturas.each do |escultura| %>
+  <tr>
+    <td><%= escultura.modelo %></td>
+    <td><%= escultura.valor %></td>
+    <td><%= escultura.foto %></td>
+    <td><%= link_to 'Show', escultura %></td>
+    <td><%= link_to 'Edit', edit_escultura_path(escultura) %></td>
+    <td><%= link_to 'Destroy', escultura, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Escultura', new_escultura_path %>

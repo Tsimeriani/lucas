@@ -1,0 +1,29 @@
+<%= form_for(@escultura) do |f| %>
+  <% if @escultura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@escultura.errors.count, "error") %> prohibited this escultura from being saved:</h2>
+
+      <ul>
+      <% @escultura.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :modelo %><br />
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :foto %><br />
+    <%= f.text_field :foto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
